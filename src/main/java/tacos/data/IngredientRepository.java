@@ -2,6 +2,9 @@ package tacos.data;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface IngredientRepository extends CrudRepository<Ingredient, String> {
+import tacos.data.Ingredient;
+
+public interface IngredientRepository
+        extends CrudRepository<Ingredient, String> {
 
 }

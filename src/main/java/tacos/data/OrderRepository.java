@@ -1,7 +1,12 @@
 package tacos.data;
 
+import java.util.UUID;
+
 import org.springframework.data.repository.CrudRepository;
 
-public interface OrderRepository extends CrudRepository<TacoOrder, Long> {
+import tacos.data.TacoOrder;
+
+public interface OrderRepository
+        extends CrudRepository<TacoOrder, UUID> {
 
 }
