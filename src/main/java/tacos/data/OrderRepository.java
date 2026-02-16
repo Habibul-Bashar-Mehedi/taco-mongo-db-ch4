@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 import tacos.data.TacoOrder;
 
 public interface OrderRepository
-        extends CrudRepository<TacoOrder, UUID> {
+        extends CrudRepository<TacoOrder, String> {
 
 }

@@ -1,6 +1,4 @@
 spring:
-  cassandra:
-    contact-points: 127.0.0.1:9042
-    local-datacenter: datacenter1
-    keyspace-name: taco
-    schema-action: create_if_not_exists
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/tacocloud

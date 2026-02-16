@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import tacos.TacoUDT;
 import tacos.data.Ingredient;
 import tacos.data.Ingredient.Type;
 import tacos.data.IngredientRepository;
@@ -25,6 +24,7 @@ import tacos.data.TacoOrder;
 @RequestMapping("/design")
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
+
 
     private final IngredientRepository ingredientRepo;
 
@@ -70,7 +70,7 @@ public class DesignTacoController {
             return "design";
         }
 
-        tacoOrder.addTaco(new TacoUDT(taco.getName(), taco.getIngredients()));
+        tacoOrder.addTaco(taco);
 
         return "redirect:/orders/current";
     }

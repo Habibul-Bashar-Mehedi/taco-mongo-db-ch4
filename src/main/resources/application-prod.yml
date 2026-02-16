@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      # Prefer a single URI so environments (Docker, CI, cloud) can override cleanly.
+      # Example: mongodb://mongo:27017/tacocloud
+      uri: ${MONGODB_URI:mongodb://localhost:27017/tacocloud}
